@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life vs. Global Timeline</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Life vs. Global Timeline</h1>
+        <p class="subtitle">Map your personal history against world events.</p>
+        
+        <div class="controls">
+            <button id="load-data-btn">Load Default Dataset (data.txt)</button>
+        </div>
+
+        <div class="input-section">
+            <textarea id="data-input" placeholder="Paste your YEAR | DATE | TYPE | CAT | TEXT data here..."></textarea>
+            <button id="generate-btn">Generate Timeline</button>
+        </div>
+
+        <div class="legend" id="legend-container"></div>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-container" id="timeline-output"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
