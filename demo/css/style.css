@@ -14,6 +14,7 @@
     --clr-residence: #95a5a6;
     --clr-travel: #00bcd4;
     --clr-social: #8bc34a;
+    --clr-other: #7f8c8d;
 }
 
 body {
@@ -35,26 +36,6 @@ body {
 
 h1 { color: #2c3e50; text-align: center; margin-top: 0; }
 .subtitle { text-align: center; color: #7f8c8d; margin-bottom: 20px; }
-
-.controls {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-#load-data-btn {
-    background: transparent;
-    color: #3498db;
-    border: 2px solid #3498db;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.2s;
-}
-#load-data-btn:hover {
-    background: #3498db;
-    color: white;
-}
 
 .input-section {
     background: #fafafa;
@@ -109,7 +90,7 @@ textarea {
     border-radius: 12px;
     border: 1px solid #eee;
 }
-.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--clr-other); }
 
 /* TIMELINE LAYOUT */
 .timeline-wrapper {
@@ -239,3 +220,19 @@ textarea {
 .cat-residence { border-color: var(--clr-residence); }
 .cat-travel { border-color: var(--clr-travel); }
 .cat-social { border-color: var(--clr-social); }
+.cat-other { border-color: var(--clr-other); }
+
+/* Legend dots need background-color (not border-color) to actually show a fill */
+.dot.cat-conflict { background: var(--clr-conflict); }
+.dot.cat-politics { background: var(--clr-politics); }
+.dot.cat-crisis { background: var(--clr-crisis); }
+.dot.cat-science { background: var(--clr-science); }
+.dot.cat-culture { background: var(--clr-culture); }
+.dot.cat-milestone { background: var(--clr-milestone); }
+.dot.cat-education { background: var(--clr-education); }
+.dot.cat-career { background: var(--clr-career); }
+.dot.cat-relationship { background: var(--clr-relationship); }
+.dot.cat-residence { background: var(--clr-residence); }
+.dot.cat-travel { background: var(--clr-travel); }
+.dot.cat-social { background: var(--clr-social); }
+.dot.cat-other { background: var(--clr-other); }

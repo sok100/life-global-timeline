@@ -1,63 +1,63 @@
-YEAR: 1975 | DATE: 12.05 | TYPE: GLOBAL | CAT: conflict | TEXT: End of the Vietnam War
-YEAR: 1975 | DATE: 22.08 | TYPE: LOCAL | CAT: milestone | TEXT: Born in Rome, Italy
-YEAR: 1977 | DATE: 25.05 | TYPE: GLOBAL | CAT: culture | TEXT: Release of Star Wars changes global pop culture
-YEAR: 1980 | DATE: 14.03 | TYPE: LOCAL | CAT: milestone | TEXT: Younger brother born (5 years difference)
-YEAR: 1981 | DATE: 01.09 | TYPE: LOCAL | CAT: education | TEXT: Started primary school in Rome
-YEAR: 1983 | DATE: 01.10 | TYPE: LOCAL | CAT: social | TEXT: Joined the local Roman football (calcio) youth academy
-YEAR: 1985 | DATE: 15.04 | TYPE: LOCAL | CAT: social | TEXT: Formed a garage rock band with school friends
-YEAR: 1986 | DATE: 26.04 | TYPE: GLOBAL | CAT: crisis | TEXT: Chernobyl nuclear disaster shocks Europe
-YEAR: 1986 | DATE: 01.09 | TYPE: LOCAL | CAT: education | TEXT: Transitioned to middle school in Rome
-YEAR: 1987 | DATE: 15.07 | TYPE: LOCAL | CAT: travel | TEXT: First trip abroad: Family summer vacation in France
-YEAR: 1989 | DATE: 09.11 | TYPE: GLOBAL | CAT: politics | TEXT: Fall of the Berlin Wall
-YEAR: 1989 | DATE: 01.09 | TYPE: LOCAL | CAT: education | TEXT: Started Liceo Classico (High School) in Rome
-YEAR: 1990 | DATE: 08.07 | TYPE: GLOBAL | CAT: culture | TEXT: Italy wins the FIFA World Cup in Rome
-YEAR: 1990 | DATE: 09.07 | TYPE: LOCAL | CAT: social | TEXT: Celebrated World Cup victory in the streets of Rome
-YEAR: 1991 | DATE: 26.12 | TYPE: GLOBAL | CAT: politics | TEXT: Dissolution of the Soviet Union
-YEAR: 1991 | DATE: 01.08 | TYPE: LOCAL | CAT: travel | TEXT: School trip to Athens, Greece
-YEAR: 1993 | DATE: 14.02 | TYPE: LOCAL | CAT: relationship | TEXT: First serious teenage girlfriend in Rome
-YEAR: 1993 | DATE: 20.07 | TYPE: LOCAL | CAT: travel | TEXT: Interrail trip visiting Spain and Portugal
-YEAR: 1994 | DATE: 25.06 | TYPE: LOCAL | CAT: education | TEXT: Graduated high school (Maturità) with top grades
-YEAR: 1994 | DATE: 10.08 | TYPE: LOCAL | CAT: travel | TEXT: Backpacking trip through Germany and Austria
-YEAR: 1994 | DATE: 27.04 | TYPE: GLOBAL | CAT: politics | TEXT: First democratic elections in South Africa
-YEAR: 1995 | DATE: 05.09 | TYPE: LOCAL | CAT: residence | TEXT: Moved to London for university
-YEAR: 1995 | DATE: 10.09 | TYPE: LOCAL | CAT: education | TEXT: Enrolled in Computer Science at a London university
-YEAR: 1995 | DATE: 20.10 | TYPE: LOCAL | CAT: social | TEXT: Bought first electric guitar for the uni band
-YEAR: 1996 | DATE: 05.07 | TYPE: GLOBAL | CAT: science | TEXT: Dolly the sheep becomes the first cloned mammal
-YEAR: 1997 | DATE: 01.05 | TYPE: LOCAL | CAT: travel | TEXT: Weekend getaway to Brussels and Amsterdam
-YEAR: 1997 | DATE: 26.06 | TYPE: GLOBAL | CAT: culture | TEXT: J.K. Rowling publishes Harry Potter
-YEAR: 1998 | DATE: 15.06 | TYPE: LOCAL | CAT: education | TEXT: Graduated with Bachelor's degree in London
-YEAR: 1998 | DATE: 01.08 | TYPE: LOCAL | CAT: residence | TEXT: Moved to Berlin, Germany
-YEAR: 1998 | DATE: 10.08 | TYPE: LOCAL | CAT: career | TEXT: Job 1: Junior Developer at a Berlin startup
-YEAR: 1999 | DATE: 01.01 | TYPE: GLOBAL | CAT: politics | TEXT: Euro currency officially established
-YEAR: 2000 | DATE: 01.01 | TYPE: GLOBAL | CAT: crisis | TEXT: The Y2K bug scare and global Millennial celebrations
-YEAR: 2001 | DATE: 11.09 | TYPE: GLOBAL | CAT: crisis | TEXT: September 11 attacks in the USA
-YEAR: 2002 | DATE: 01.03 | TYPE: LOCAL | CAT: career | TEXT: Promoted to Lead Developer at the startup
-YEAR: 2003 | DATE: 12.08 | TYPE: LOCAL | CAT: travel | TEXT: Road trip through Switzerland and Liechtenstein
-YEAR: 2004 | DATE: 01.05 | TYPE: GLOBAL | CAT: politics | TEXT: EU Enlargement: 10 new countries join
-YEAR: 2005 | DATE: 01.10 | TYPE: LOCAL | CAT: career | TEXT: Job 2: Hired as IT Architect at a major Berlin corp
-YEAR: 2006 | DATE: 18.09 | TYPE: LOCAL | CAT: relationship | TEXT: Met long-term partner at a tech conference
-YEAR: 2007 | DATE: 01.02 | TYPE: LOCAL | CAT: residence | TEXT: Moved into a rented apartment in Kreuzberg, Berlin
-YEAR: 2008 | DATE: 15.09 | TYPE: GLOBAL | CAT: crisis | TEXT: Global Financial Crisis (Great Recession) begins
-YEAR: 2008 | DATE: 20.07 | TYPE: LOCAL | CAT: milestone | TEXT: Brother graduates uni in Rome; flew back for party
-YEAR: 2009 | DATE: 05.08 | TYPE: LOCAL | CAT: travel | TEXT: Summer vacation in Copenhagen, Denmark
-YEAR: 2010 | DATE: 26.09 | TYPE: LOCAL | CAT: social | TEXT: Ran the Berlin Marathon (sports milestone)
-YEAR: 2011 | DATE: 05.10 | TYPE: GLOBAL | CAT: culture | TEXT: Death of Steve Jobs; shift in the tech world
-YEAR: 2012 | DATE: 15.01 | TYPE: LOCAL | CAT: career | TEXT: Job 3: Co-founded a tech consultancy in Berlin
-YEAR: 2013 | DATE: 23.12 | TYPE: LOCAL | CAT: travel | TEXT: Visited brother and parents in Rome for Christmas
-YEAR: 2015 | DATE: 11.02 | TYPE: GLOBAL | CAT: science | TEXT: Detection of gravitational waves by LIGO
-YEAR: 2016 | DATE: 10.06 | TYPE: LOCAL | CAT: relationship | TEXT: Married partner in a civil ceremony in Berlin
-YEAR: 2016 | DATE: 23.06 | TYPE: GLOBAL | CAT: politics | TEXT: UK votes for Brexit
-YEAR: 2017 | DATE: 20.05 | TYPE: LOCAL | CAT: social | TEXT: Uni band reunites for a one-off gig in London
-YEAR: 2019 | DATE: 01.11 | TYPE: LOCAL | CAT: residence | TEXT: Bought a house in the suburbs of Berlin
-YEAR: 2020 | DATE: 15.03 | TYPE: GLOBAL | CAT: crisis | TEXT: COVID-19 Pandemic locks down Europe
-YEAR: 2020 | DATE: 01.04 | TYPE: LOCAL | CAT: career | TEXT: Pivoted consultancy business to fully remote work
-YEAR: 2022 | DATE: 24.02 | TYPE: GLOBAL | CAT: conflict | TEXT: Russia invades Ukraine
-YEAR: 2022 | DATE: 15.06 | TYPE: LOCAL | CAT: social | TEXT: Organized a local charity concert in Berlin for Ukraine refugees
-YEAR: 2023 | DATE: 15.06 | TYPE: LOCAL | CAT: travel | TEXT: Post-pandemic trip to Sweden and Norway
-YEAR: 2023 | DATE: 15.06 | TYPE: GLOBAL | CAT: science | TEXT: Public release of GPT-4 and the global AI boom
-YEAR: 2024 | DATE: 15.06 | TYPE: LOCAL | CAT: career | TEXT: Expanded tech consultancy to open a new branch in Rome
-YEAR: 2024 | DATE: 15.06 | TYPE: GLOBAL | CAT: politics | TEXT: Historic European Parliament elections
-YEAR: 2024 | DATE: 15.06 | TYPE: LOCAL | CAT: relationship | TEXT: First child born in Berlin (becoming an uncle figure contextually for his brother's kids if he had any, but here he becomes a father)
-YEAR: 2024 | DATE: 15.06 | TYPE: LOCAL | CAT: education | TEXT: Enrolled in an online Executive MBA program
-YEAR: 2024 | DATE: 15.06 | TYPE: LOCAL | CAT: milestone | TEXT: Turned 49, reflecting on a life split between Italy, UK, and Germany
-YEAR: 2025 | DATE: 15.06 | TYPE: LOCAL | CAT: social | TEXT: Took a sabbatical to write a book about European tech history
+DATE: 1975.05.12 | TYPE: GLOBAL | CAT: conflict | TEXT: End of the Vietnam War
+DATE: 1975.08.22 | TYPE: LOCAL | CAT: milestone | TEXT: Born in Rome, Italy
+DATE: 1977.05.25 | TYPE: GLOBAL | CAT: culture | TEXT: Release of Star Wars changes global pop culture
+DATE: 1980.03.14 | TYPE: LOCAL | CAT: milestone | TEXT: Younger brother born (5 years difference)
+DATE: 1981.09.01 | TYPE: LOCAL | CAT: education | TEXT: Started primary school in Rome
+DATE: 1983.10.01 | TYPE: LOCAL | CAT: social | TEXT: Joined the local Roman football (calcio) youth academy
+DATE: 1985.04.15 | TYPE: LOCAL | CAT: social | TEXT: Formed a garage rock band with school friends
+DATE: 1986.04.26 | TYPE: GLOBAL | CAT: crisis | TEXT: Chernobyl nuclear disaster shocks Europe
+DATE: 1986.09.01 | TYPE: LOCAL | CAT: education | TEXT: Transitioned to middle school in Rome
+DATE: 1987.07.15 | TYPE: LOCAL | CAT: travel | TEXT: First trip abroad: Family summer vacation in France
+DATE: 1989.11.09 | TYPE: GLOBAL | CAT: politics | TEXT: Fall of the Berlin Wall
+DATE: 1989.09.01 | TYPE: LOCAL | CAT: education | TEXT: Started Liceo Classico (High School) in Rome
+DATE: 1990.07.08 | TYPE: GLOBAL | CAT: culture | TEXT: Italy wins the FIFA World Cup in Rome
+DATE: 1990.07.09 | TYPE: LOCAL | CAT: social | TEXT: Celebrated World Cup victory in the streets of Rome
+DATE: 1991.12.26 | TYPE: GLOBAL | CAT: politics | TEXT: Dissolution of the Soviet Union
+DATE: 1991.08.01 | TYPE: LOCAL | CAT: travel | TEXT: School trip to Athens, Greece
+DATE: 1993.02.14 | TYPE: LOCAL | CAT: relationship | TEXT: First serious teenage girlfriend in Rome
+DATE: 1993.07.20 | TYPE: LOCAL | CAT: travel | TEXT: Interrail trip visiting Spain and Portugal
+DATE: 1994.06.25 | TYPE: LOCAL | CAT: education | TEXT: Graduated high school (Maturità) with top grades
+DATE: 1994.08.10 | TYPE: LOCAL | CAT: travel | TEXT: Backpacking trip through Germany and Austria
+DATE: 1994.04.27 | TYPE: GLOBAL | CAT: politics | TEXT: First democratic elections in South Africa
+DATE: 1995.09.05 | TYPE: LOCAL | CAT: residence | TEXT: Moved to London for university
+DATE: 1995.09.10 | TYPE: LOCAL | CAT: education | TEXT: Enrolled in Computer Science at a London university
+DATE: 1995.10.20 | TYPE: LOCAL | CAT: social | TEXT: Bought first electric guitar for the uni band
+DATE: 1996.07.05 | TYPE: GLOBAL | CAT: science | TEXT: Dolly the sheep becomes the first cloned mammal
+DATE: 1997.05.01 | TYPE: LOCAL | CAT: travel | TEXT: Weekend getaway to Brussels and Amsterdam
+DATE: 1997.06.26 | TYPE: GLOBAL | CAT: culture | TEXT: J.K. Rowling publishes Harry Potter
+DATE: 1998.06.15 | TYPE: LOCAL | CAT: education | TEXT: Graduated with Bachelor's degree in London
+DATE: 1998.08.01 | TYPE: LOCAL | CAT: residence | TEXT: Moved to Berlin, Germany
+DATE: 1998.08.10 | TYPE: LOCAL | CAT: career | TEXT: Job 1: Junior Developer at a Berlin startup
+DATE: 1999.01.01 | TYPE: GLOBAL | CAT: politics | TEXT: Euro currency officially established
+DATE: 2000.01.01 | TYPE: GLOBAL | CAT: crisis | TEXT: The Y2K bug scare and global Millennial celebrations
+DATE: 2001.09.11 | TYPE: GLOBAL | CAT: crisis | TEXT: September 11 attacks in the USA
+DATE: 2002.03.01 | TYPE: LOCAL | CAT: career | TEXT: Promoted to Lead Developer at the startup
+DATE: 2003.08.12 | TYPE: LOCAL | CAT: travel | TEXT: Road trip through Switzerland and Liechtenstein
+DATE: 2004.05.01 | TYPE: GLOBAL | CAT: politics | TEXT: EU Enlargement: 10 new countries join
+DATE: 2005.10.01 | TYPE: LOCAL | CAT: career | TEXT: Job 2: Hired as IT Architect at a major Berlin corp
+DATE: 2006.09.18 | TYPE: LOCAL | CAT: relationship | TEXT: Met long-term partner at a tech conference
+DATE: 2007.02.01 | TYPE: LOCAL | CAT: residence | TEXT: Moved into a rented apartment in Kreuzberg, Berlin
+DATE: 2008.09.15 | TYPE: GLOBAL | CAT: crisis | TEXT: Global Financial Crisis (Great Recession) begins
+DATE: 2008.07.20 | TYPE: LOCAL | CAT: milestone | TEXT: Brother graduates uni in Rome; flew back for party
+DATE: 2009.08.05 | TYPE: LOCAL | CAT: travel | TEXT: Summer vacation in Copenhagen, Denmark
+DATE: 2010.09.26 | TYPE: LOCAL | CAT: social | TEXT: Ran the Berlin Marathon (sports milestone)
+DATE: 2011.10.05 | TYPE: GLOBAL | CAT: culture | TEXT: Death of Steve Jobs; shift in the tech world
+DATE: 2012.01.15 | TYPE: LOCAL | CAT: career | TEXT: Job 3: Co-founded a tech consultancy in Berlin
+DATE: 2013.12.23 | TYPE: LOCAL | CAT: travel | TEXT: Visited brother and parents in Rome for Christmas
+DATE: 2015.02.11 | TYPE: GLOBAL | CAT: science | TEXT: Detection of gravitational waves by LIGO
+DATE: 2016.06.10 | TYPE: LOCAL | CAT: relationship | TEXT: Married partner in a civil ceremony in Berlin
+DATE: 2016.06.23 | TYPE: GLOBAL | CAT: politics | TEXT: UK votes for Brexit
+DATE: 2017.05.20 | TYPE: LOCAL | CAT: social | TEXT: Uni band reunites for a one-off gig in London
+DATE: 2019.11.01 | TYPE: LOCAL | CAT: residence | TEXT: Bought a house in the suburbs of Berlin
+DATE: 2020.03.15 | TYPE: GLOBAL | CAT: crisis | TEXT: COVID-19 Pandemic locks down Europe
+DATE: 2020.04.01 | TYPE: LOCAL | CAT: career | TEXT: Pivoted consultancy business to fully remote work
+DATE: 2022.02.24 | TYPE: GLOBAL | CAT: conflict | TEXT: Russia invades Ukraine
+DATE: 2022.06.15 | TYPE: LOCAL | CAT: social | TEXT: Organized a local charity concert in Berlin for Ukraine refugees
+DATE: 2023.06.15 | TYPE: LOCAL | CAT: travel | TEXT: Post-pandemic trip to Sweden and Norway
+DATE: 2023.06.15 | TYPE: GLOBAL | CAT: science | TEXT: Public release of GPT-4 and the global AI boom
+DATE: 2024.06.15 | TYPE: LOCAL | CAT: career | TEXT: Expanded tech consultancy to open a new branch in Rome
+DATE: 2024.06.15 | TYPE: GLOBAL | CAT: politics | TEXT: Historic European Parliament elections
+DATE: 2024.06.15 | TYPE: LOCAL | CAT: relationship | TEXT: First child born in Berlin (becoming an uncle figure contextually for his brother's kids if he had any, but here he becomes a father)
+DATE: 2024.06.15 | TYPE: LOCAL | CAT: education | TEXT: Enrolled in an online Executive MBA program
+DATE: 2024.06.15 | TYPE: LOCAL | CAT: milestone | TEXT: Turned 49, reflecting on a life split between Italy, UK, and Germany
+DATE: 2025.06.15 | TYPE: LOCAL | CAT: social | TEXT: Took a sabbatical to write a book about European tech history
