@@ -96,6 +96,11 @@ This project is evolving to use the latest web standards and provide a more auto
 - **Emoji Icon Parser** — auto-detection of emojis in the `TEXT` field to replace standard text category badges with intuitive icons (✈️ for travel, 🎓 for school, etc.).
 - **Dynamic Year Scaling** — adjusting the horizontal width of year-blocks based on event density (a year with 5 events takes up more visual space than a year with 1 event).
 
+- **Light/dark mode in CSS and UI
+- **JS file splitting in more files to separate the parsing and other procedures, with versioning. Optimization: Refactored JS to a class-based structure, used DocumentFragment for efficient rendering, and decoupled global events from local input.
+- **Security: Performed vulnerability analysis. Confirmed XSS protection. Added data persistence via localStorage
+- **Features: Add global event filtering (year range and categories), Popover API for event details, and modern CSS (Nesting, Variables).
+
 
 # 🤝 Contributing
 
