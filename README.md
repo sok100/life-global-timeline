@@ -78,15 +78,24 @@ This app is fully client-side and offline-first — nothing you type or paste is
 - **Category names are validated** against a strict whitelist before being used as a CSS class, preventing attribute/markup injection through a crafted `CAT:` value.
 - **A strict Content-Security-Policy** (`default-src 'self'`) is set via a `<meta>` tag, blocking any external script, style, or resource from loading, as defense-in-depth.
 
-# 🛠️ Roadmap & Upcoming Features
+# 🛠️ Roadmap & Upcoming Features (Updated 2026)
 
-This is the MVP (Minimum Viable Product). The following features are planned for future releases:
+This project is evolving to use the latest web standards and provide a more automated experience.
 
-- **CSV/Google Sheets Import** — ability to upload a `.csv` file or connect a Google Sheet to automatically populate the timeline, removing the need for manual text parsing.
+- **Automated Global History Scraping** — A dedicated ingestion pipeline (`scripts/fetch_global_events.py`) to maintain an up-to-date repository of major world events from 1800 to the present.
 - **Wikipedia API Integration (Auto-Fill)** — a feature where the user inputs only local events, and the app automatically queries the Wikipedia API for the corresponding years to populate the global events section.
+- **CSV/Google Sheets Import** — ability to upload a `.csv` file or connect a Google Sheet to automatically populate the timeline, removing the need for manual text parsing.
+
+- **Advanced Global Filtering** — Real-time filtering by date range and category (Politics, Science, Crisis, etc.) using high-performance DOM reconciliation.
+- **Modern Web API Integration**:
+    - **Popover API**: For non-modal, lightweight event detail overlays.
+    - **CSS Nesting & Container Queries**: Ensuring optimal readability and performance across all devices.
+    - **View Transitions API**: Smooth visual state changes when filtering.
+- **Data Persistence** — Full implementation of local browser storage for personal timelines.
 - **Causal Linking (Impact Arrows)** — visual dotted lines connecting a global event (e.g. "2020 COVID-19") to a local event (e.g. "2020 Lost job"), explicitly showing cause-and-effect relationships.
-- **Dynamic Year Scaling** — adjusting the horizontal width of year-blocks based on event density (a year with 5 events takes up more visual space than a year with 1 event).
 - **Emoji Icon Parser** — auto-detection of emojis in the `TEXT` field to replace standard text category badges with intuitive icons (✈️ for travel, 🎓 for school, etc.).
+- **Dynamic Year Scaling** — adjusting the horizontal width of year-blocks based on event density (a year with 5 events takes up more visual space than a year with 1 event).
+
 
 # 🤝 Contributing
 
