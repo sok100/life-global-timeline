@@ -1,3 +1,4 @@
+/* @file parser.js | @version 1.2.0 | @updated 2026-07-21 | Life × Global Timeline */
 /**
  * parser.js
  * Transforms raw textarea lines into a sorted array of structured events.
