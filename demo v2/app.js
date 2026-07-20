@@ -1,3 +1,4 @@
+/* @file app.js | @version 1.2.0 | @updated 2026-07-21 | Life × Global Timeline */
 /**
  * app.js
  * Orchestrator: wires parser, renderer, storage, filters, theme and io
