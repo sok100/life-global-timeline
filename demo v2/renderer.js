@@ -1,3 +1,4 @@
+/* @file renderer.js | @version 1.2.0 | @updated 2026-07-21 | Life × Global Timeline */
 /**
  * renderer.js
  * Events → DOM. Security model: every piece of user data enters the DOM
