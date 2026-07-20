@@ -1,3 +1,4 @@
+/* @file io.js | @version 1.2.0 | @updated 2026-07-21 | Life × Global Timeline */
 /**
  * io.js
  * Export (JSON / CSV) and import (CSV / JSON).
