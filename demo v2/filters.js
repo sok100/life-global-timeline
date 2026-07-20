@@ -1,3 +1,4 @@
+/* @file filters.js | @version 1.2.0 | @updated 2026-07-21 | Life × Global Timeline */
 /**
  * filters.js
  * Category taxonomy metadata (labels + colors — single source of truth),
