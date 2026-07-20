@@ -50,3 +50,43 @@ life-global-timeline/
     ├── renderer.js
     └── app.js
     └── README.md
+
+## ✨ Ce e nou față de versiunea anterioară
+Aspect
+Înainte
+Acum
+Comentarii
+Română
+Engleză (toate fișierele)
+Design
+Carduri plate, header generic
+Estetică de „registru de arhivă": fundal stratificat (dot-grid + wash), masthead cu riglă dublă, spine punctat între axe
+Statistici
+—
+Statistici live în masthead (personale / globale / interval de ani), cu animație la schimbare
+Grupare
+Carduri simple
+Grupare pe ani cu heading mono + riglă
+Mișcare
+Doar hover
+Scroll-reveal eșalonat (IntersectionObserver, respectă prefers-reduced-motion), micro-interacțiuni pe butoane/toggle/popover
+Culori categorii
+13 clase CSS duplicate
+O singură sursă (CATEGORY_COLORS în JS → --cat custom property)
+Randare
+Axe goale
+Axe cu header sticky și contor de evenimente
+Shortcut
+—
+Ctrl+Enter generează timeline-ul
+Verificare rapidă: dublu-click pe demo/index.html → timeline-ul se randează instant, consola (F12) e curată, filtrele/trema/exportul funcționează.
+
+
+###    ✅ Checklist de verificare
+După ce aplici modificările, deschide demo/index.html prin dublu-click și confirmă:
+Timeline-ul se randează imediat (datele din textarea)
+Consola (F12) nu arată erori CORS sau 404
+Toggle-ul dark/light funcționează și persistă la reload
+Filtrele (categorii + slider ani) funcționează
+Export JSON/CSV descarcă fișiere
+La reload, textul din textarea e restaurat din localStorage
