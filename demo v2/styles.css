@@ -1,0 +1,563 @@
+/* ═══════════════════════════════════════════════════════════════
+   styles.css — Life × Global Timeline
+   Archive-ledger aesthetic: warm paper, ink, dual-axis spine.
+   System font stacks only (offline-first, strict CSP — no CDN fonts).
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── 1. Design tokens ─────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+
+  /* Surfaces & ink */
+  --paper: #f3f1ea;
+  --card: #fbfaf6;
+  --ink: #20242e;
+  --muted: #5c6270;
+  --line: #ddd9cc;
+  --line-strong: #b9b4a4;
+
+  /* Ambient background layers */
+  --dot: rgba(32, 36, 46, 0.07);
+  --wash: rgba(32, 36, 46, 0.045);
+
+  --shadow-sm: 0 1px 3px rgba(32, 36, 46, 0.07);
+  --shadow-lg: 0 8px 24px rgba(32, 36, 46, 0.14);
+
+  /* Axis identities: personal = warm gold, world = cool steel */
+  --axis-local: #a3741c;
+  --axis-global: #4f6d95;
+
+  /* Type stacks */
+  --font-display: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'SF Mono', Consolas, monospace;
+
+  --radius: 6px;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #14171f;
+  --card: #1b1f2a;
+  --ink: #e8e6dd;
+  --muted: #9aa0ae;
+  --line: #2a2f3d;
+  --line-strong: #3d4454;
+
+  --dot: rgba(255, 255, 255, 0.045);
+  --wash: rgba(255, 255, 255, 0.03);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.45);
+
+  --axis-local: #d9a83e;
+  --axis-global: #8ba3c7;
+}
+
+/* ─── 2. Reset & base ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+/* Layered ambient background: ledger dot-grid + soft top wash */
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  line-height: 1.55;
+  padding: 2rem 1.5rem 3rem;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(var(--dot) 1px, transparent 1px),
+    linear-gradient(180deg, var(--wash) 0%, transparent 340px);
+  background-size: 22px 22px, 100% 100%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection { background: color-mix(in srgb, var(--ink) 18%, transparent); }
+* { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+
+code, kbd {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+/* ─── 3. Accessibility helpers ─────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 999;
+  padding: 0.5rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 0 0 var(--radius) 0;
+  text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/* ─── 4. Masthead ──────────────────────────────────────────────── */
+.app-masthead {
+  max-width: 1180px;
+  margin: 0 auto 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 3px double var(--line-strong); /* archival double rule */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.app-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 5vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.app-title .times { color: var(--axis-global); font-style: italic; padding: 0 0.06em; }
+
+.tagline {
+  margin-top: 0.6rem;
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Live statistics block */
+.stats { display: flex; gap: 0; }
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 1.25rem;
+  border-left: 1px solid var(--line-strong);
+}
+.stat:first-child { border-left: none; padding-left: 0; }
+.stat-num {
+  font-family: var(--font-mono);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.stat-num.bump { animation: bump 0.35s ease; }
+@keyframes bump { 50% { transform: scale(1.22); } }
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── 5. Theme toggle ──────────────────────────────────────────── */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  width: 42px;
+  height: 42px;
+  font-size: 1.15rem;
+  display: grid;
+  place-items: center;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, background 0.3s;
+}
+.theme-toggle:hover { transform: rotate(18deg) scale(1.08); }
+.theme-toggle:active { transform: scale(0.94); }
+
+/* ─── 6. Data input (collapsible ledger) ───────────────────────── */
+.data-input {
+  max-width: 1180px;
+  margin: 0 auto 1rem;
+}
+.data-input summary {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.4rem 0;
+  user-select: none;
+}
+.data-input summary:hover { color: var(--ink); }
+
+#input-data {
+  width: 100%;
+  min-height: 230px;
+  margin-top: 0.4rem;
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.3s;
+}
+#input-data:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ink) 12%, transparent);
+}
+
+.hint {
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ─── 7. Toolbar buttons ───────────────────────────────────────── */
+.controls {
+  max-width: 1180px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.controls-sep { width: 1px; height: 22px; background: var(--line-strong); margin: 0 0.35rem; }
+
+.btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.1s;
+}
+.btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn:active { transform: translateY(1px); }
+
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 700; }
+.btn-primary:hover { background: color-mix(in srgb, var(--ink) 82%, var(--paper)); }
+
+#file-input { display: none; }
+
+/* ─── 8. Filter panel ──────────────────────────────────────────── */
+#filter-panel { max-width: 1180px; margin: 0 auto; }
+#filter-panel:empty { display: none; }
+
+.filter-cats {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+.filter-cats legend {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+
+/* Category chip: colored dot + label; fills with category tint when active */
+.filter-chip {
+  --cat: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.75rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.18s, border-color 0.18s, transform 0.12s;
+}
+.filter-chip:hover { transform: translateY(-1px); }
+.filter-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cat);
+  flex-shrink: 0;
+}
+.filter-chip input { accent-color: var(--cat); width: 13px; height: 13px; cursor: pointer; }
+.filter-chip:has(input:checked) {
+  background: color-mix(in srgb, var(--cat) 14%, transparent);
+  border-color: color-mix(in srgb, var(--cat) 50%, var(--line));
+}
+
+.filter-years {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+.filter-years .years-caption {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.filter-years input[type="range"] {
+  flex: 1;
+  min-width: 130px;
+  accent-color: var(--ink);
+  cursor: pointer;
+}
+.filter-years .year-val { font-weight: 700; min-width: 3.2em; text-align: center; }
+
+/* ─── 9. Timeline output & dual axes ───────────────────────────── */
+#timeline-output {
+  max-width: 1180px;
+  margin: 0 auto;
+  view-transition-name: timeline;
+}
+
+.timeline-empty {
+  padding: 3.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* Legend row */
+.timeline-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.75rem;
+}
+.legend-item {
+  --cat: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cat) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cat) 35%, transparent);
+}
+.legend-item .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cat); }
+.legend-item .count { opacity: 0.65; }
+
+/* Two parallel tracks joined by a dashed spine */
+.axes-wrapper { position: relative; }
+@media (min-width: 900px) {
+  .axes-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .axes-wrapper::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: repeating-linear-gradient(180deg, var(--line-strong) 0 6px, transparent 6px 13px);
+  }
+}
+
+.axis-head {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  margin-bottom: 1rem;
+  background: var(--paper);
+  border-bottom: 2px solid var(--axis-ink, var(--line-strong));
+  transition: background 0.3s;
+}
+.axis-local { --axis-ink: var(--axis-local); }
+.axis-global { --axis-ink: var(--axis-global); }
+
+.axis-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--axis-ink);
+}
+.axis-count {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+
+/* Year groups */
+.year-group { margin-bottom: 1.6rem; }
+.year-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+.year-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* ─── 10. Event cards ──────────────────────────────────────────── */
+.event-card {
+  --cat: var(--muted);
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--cat);
+  border-radius: var(--radius);
+  padding: 0.7rem 2.2rem 0.7rem 0.9rem;
+  margin-bottom: 0.6rem;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-left-width 0.18s ease,
+    background 0.3s;
+}
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-left-width: 6px;
+}
+
+.event-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+.event-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+.event-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cat) 13%, transparent);
+  color: color-mix(in srgb, var(--cat) 80%, var(--ink));
+}
+.event-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cat); }
+
+.event-text { margin-top: 0.35rem; font-size: 0.9rem; }
+
+.event-info-btn {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  opacity: 0.45;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.event-info-btn:hover { opacity: 1; transform: scale(1.15); }
+
+/* Scroll-reveal: cards enter with a staggered rise.
+   Uses the CSS `translate` property so it never fights the hover transform. */
+.reveal-enabled .event-card {
+  opacity: 0;
+  translate: 0 16px;
+  transition:
+    opacity 0.55s ease var(--reveal-delay, 0s),
+    translate 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-left-width 0.18s ease;
+}
+.reveal-enabled .event-card.is-revealed { opacity: 1; translate: 0 0; }
+
+/* ─── 11. Popover (event details) ──────────────────────────────── */
+.event-popover {
+  width: min(340px, 88vw);
+  padding: 1rem 1.2rem;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+.event-popover:popover-open { animation: pop-in 0.16s ease-out; }
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+.event-popover::backdrop { background: color-mix(in srgb, var(--ink) 38%, transparent); }
+
+.popover-title { font-family: var(--font-display); font-size: 1.05rem; line-height: 1.35; }
+.popover-meta {
+  margin-top: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* ─── 12. Footer ───────────────────────────────────────────────── */
+.app-footer {
+  max-width: 1180px;
+  margin: 3rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ─── 13. View Transitions (filtering crossfade) ───────────────── */
+::view-transition-old(timeline),
+::view-transition-new(timeline) { animation-duration: 0.25s; }
+
+/* ─── 14. Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .reveal-enabled .event-card { opacity: 1 !important; translate: none !important; }
+}
+
+/* ─── 15. Small screens ────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { padding: 1.25rem 1rem 2.5rem; }
+  .app-masthead { flex-direction: column; align-items: flex-start; }
+  .stats { width: 100%; justify-content: flex-start; }
+  .stat { align-items: flex-start; padding: 0 1rem; }
+  .stat:first-child { padding-left: 0; }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A dual-axis timeline that maps personal milestones against global history. 100% client-side." />
+  <!-- Strict CSP: nothing external can load. Defense-in-depth, per project security policy. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:;" />
+  <title>Life × Global Timeline</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏳</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#timeline-output" class="skip-link">Skip to timeline</a>
+
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light/dark theme">🌙</button>
+
+  <!-- Masthead: archive-style header with live statistics -->
+  <header class="app-masthead">
+    <div class="masthead-title">
+      <p class="eyebrow">Personal × Global Archive · Est. 1800 → Today</p>
+      <h1 class="app-title">Life <span class="times">×</span> Global Timeline</h1>
+      <p class="tagline">Your milestones, set against the turning of the world. Everything stays in your browser.</p>
+    </div>
+    <div class="stats" role="status" aria-label="Timeline statistics">
+      <div class="stat"><span class="stat-num" id="stat-local">0</span><span class="stat-label">Personal</span></div>
+      <div class="stat"><span class="stat-num" id="stat-global">0</span><span class="stat-label">Global</span></div>
+      <div class="stat"><span class="stat-num" id="stat-span">—</span><span class="stat-label">Year span</span></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Data input, collapsible so the timeline takes center stage -->
+    <details class="data-input" open>
+      <summary>DATA INPUT · <code>DATE: YYYY.MM.DD | TYPE: LOCAL/GLOBAL | CAT: category | TEXT: description</code></summary>
+      <textarea id="input-data" spellcheck="false"
+        aria-label="Timeline events, one per line, in the documented format">DATE: 1989.11.09 | TYPE: GLOBAL | CAT: politics | TEXT: Fall of the Berlin Wall
+DATE: 1990.05.15 | TYPE: LOCAL | CAT: milestone | TEXT: I was born in Bucharest
+DATE: 1996.09.01 | TYPE: LOCAL | CAT: education | TEXT: Started primary school
+DATE: 2001.09.11 | TYPE: GLOBAL | CAT: crisis | TEXT: September 11 attacks in the USA
+DATE: 2004.03.29 | TYPE: GLOBAL | CAT: politics | TEXT: Romania joins NATO
+DATE: 2007.01.01 | TYPE: GLOBAL | CAT: politics | TEXT: Romania joins the EU
+DATE: 2007.06.29 | TYPE: LOCAL | CAT: education | TEXT: Graduated from high school
+DATE: 2008.09.15 | TYPE: GLOBAL | CAT: crisis | TEXT: Lehman Brothers collapse — global financial crisis
+DATE: 2010.09.15 | TYPE: LOCAL | CAT: education | TEXT: Started university — Computer Science
+DATE: 2012.07.04 | TYPE: GLOBAL | CAT: science | TEXT: Higgs boson discovered at CERN
+DATE: 2014.06.01 | TYPE: LOCAL | CAT: career | TEXT: First internship at a tech company
+DATE: 2016.06.23 | TYPE: GLOBAL | CAT: politics | TEXT: Brexit referendum — UK votes to leave EU
+DATE: 2017.09.01 | TYPE: LOCAL | CAT: career | TEXT: First full-time job as a developer
+DATE: 2020.03.11 | TYPE: GLOBAL | CAT: crisis | TEXT: WHO declares COVID-19 a global pandemic
+DATE: 2020.04.15 | TYPE: LOCAL | CAT: career | TEXT: Switched to full remote work
+DATE: 2022.02.24 | TYPE: GLOBAL | CAT: conflict | TEXT: Russia invades Ukraine
+DATE: 2022.11.30 | TYPE: GLOBAL | CAT: science | TEXT: ChatGPT launched by OpenAI
+DATE: 2023.06.10 | TYPE: LOCAL | CAT: travel | TEXT: First trip to Japan
+DATE: 2024.03.01 | TYPE: LOCAL | CAT: relationship | TEXT: Got married 🎉</textarea>
+      <p class="hint">Invalid lines are skipped and logged to the console (F12). Unknown categories fall back to <code>other</code>. Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to generate.</p>
+    </details>
+
+    <!-- Toolbar -->
+    <div class="controls">
+      <button id="btn-generate" class="btn btn-primary" type="button">▶ Generate Timeline</button>
+      <button id="btn-clear" class="btn" type="button">Clear</button>
+      <span class="controls-sep" aria-hidden="true"></span>
+      <button id="btn-export-json" class="btn" type="button">Export JSON</button>
+      <button id="btn-export-csv" class="btn" type="button">Export CSV</button>
+      <button id="btn-import" class="btn" type="button">Import CSV / JSON</button>
+      <input type="file" id="file-input" accept=".csv,.json" />
+    </div>
+
+    <!-- Filter panel is populated by filters.js after each generate -->
+    <section id="filter-panel" aria-label="Timeline filters"></section>
+
+    <!-- Timeline output (announced to screen readers on update) -->
+    <section id="timeline-output" aria-live="polite" aria-label="Generated timeline"></section>
+  </main>
+
+  <footer class="app-footer">
+    100% client-side · nothing leaves this browser · auto-saved to localStorage
+  </footer>
+
+  <!-- Classic scripts (no ES modules) so the app works from file:// with zero server.
+       Each file registers itself on the global LT namespace. -->
+  <script src="parser.js"></script>
+  <script src="storage.js"></script>
+  <script src="filters.js"></script>
+  <script src="theme.js"></script>
+  <script src="io.js"></script>
+  <script src="renderer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
