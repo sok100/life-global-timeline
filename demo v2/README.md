@@ -3,14 +3,14 @@
 ### Arhitectură modulară (ES6)
 | Fișier | Responsabilitate |
 |---|---|
-| `src/parser.js` | Parsare text → `Event[]` (regex, validare CAT, sortare) |
-| `src/renderer.js` | `Event[]` → DOM (`DocumentFragment`, `createElement`, Popover API) |
-| `src/storage.js` | `localStorage` — auto-save (debounce 2s), load, clear, theme |
-| `src/filters.js` | Filtrare categorii (checkbox) + interval ani (dual slider) |
-| `src/theme.js` | Dark/Light mode (CSS variables, `prefers-color-scheme`, persistență) |
-| `src/io.js` | Import/Export CSV + JSON |
-| `src/app.js` | Orchestrator + View Transitions API |
-| `src/styles.css` | Toate stilurile (light/dark, carduri, categorii, popover) |
+| `parser.js` | Parsare text → `Event[]` (regex, validare CAT, sortare) |
+| `renderer.js` | `Event[]` → DOM (`DocumentFragment`, `createElement`, Popover API) |
+| `storage.js` | `localStorage` — auto-save (debounce 2s), load, clear, theme |
+| `filters.js` | Filtrare categorii (checkbox) + interval ani (dual slider) |
+| `theme.js` | Dark/Light mode (CSS variables, `prefers-color-scheme`, persistență) |
+| `io.js` | Import/Export CSV + JSON |
+| `app.js` | Orchestrator + View Transitions API |
+| `styles.css` | Toate stilurile (light/dark, carduri, categorii, popover) |
 
 
 ---
