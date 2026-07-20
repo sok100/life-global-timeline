@@ -1,3 +1,4 @@
+/* @file theme.js | @version 1.2.0 | @updated 2026-07-21 | Life × Global Timeline */
 /**
  * theme.js
  * Light/dark theme. Priority: explicit user choice (localStorage)
